@@ -1,5 +1,6 @@
 import React from "react";
-import { Button, Avatar } from "@material-ui/core";
+import { Button, Avatar } from "@mui/material";
+import { MusicNote } from "@mui/icons-material";
 import "../css/video-footer.css";
 
 function VideoFooter({ channel, avatarSrc, song, likes, shares }) {
@@ -10,6 +11,10 @@ function VideoFooter({ channel, avatarSrc, song, likes, shares }) {
         <h3>
           {channel} ●<Button>Follow</Button>
         </h3>
+      </div>
+
+      <div className="video-card__footer-ticker">
+        <MusicNote className="video-card__footer-icon" />
       </div>
     </div>
   );
