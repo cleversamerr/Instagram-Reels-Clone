@@ -11,7 +11,11 @@ html {
 }
 
 .app__top {
-  margin-bottom: -15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -10rem;
 }
 
 .app__top > h1 {
@@ -19,16 +23,34 @@ html {
   color: #fff;
 }
 
+.app__rights {
+  margin-top: 2rem;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 10;
+}
+
+.app__rights > a {
+  text-decoration: none;
+  color: tomato;
+}
+
 .app__logo {
   height: 12vh;
+}
+
+.app__content {
+  display: grid;
+  place-items: center;
 }
 
 .app__videos {
   position: relative;
   height: 65vh;
-  background-color: #fff;
-  width: 70%;
-  border-radius: 20px;
+  background-color: #000;
+  width: 70vw;
+  border-radius: 2rem;
+  margin-top: 5rem;
   max-width: 45rem;
   max-height: 120rem;
   overflow: scroll;
@@ -44,4 +66,101 @@ html {
 .app__videos {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+.video-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+}
+
+.video-card__header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.video-card__header > * {
+  padding: 20px;
+}
+
+.video-card__video {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.video-card__footer {
+  position: relative;
+  bottom: 100px;
+  margin-left: 5px;
+}
+
+.video-card__footer-text {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.video-card__footer-text > h3 {
+  margin-left: 10px;
+  padding-bottom: 20px;
+}
+
+.video-card__footer-text > h3 > button {
+  color: #fff;
+  font-weight: 900;
+  text-transform: inherit;
+}
+
+.video-card__footer-ticker > .ticker {
+  width: 60%;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  height: fit-content;
+}
+
+.video-card__footer-icon {
+  position: absolute;
+  left: 5px;
+  color: #fff;
+}
+
+.video-card__footer-ticker h1 {
+  font-size: 12px;
+  color: #fff;
+  padding-top: 7px;
+}
+
+.video-card__footer-actions {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.video-card__footer-actions--left > .MuiSvgIcon-root {
+  padding: 0 8px;
+}
+
+.video-card__footer-actions--right {
+  display: flex;
+}
+
+.video-card__footer-actions-stat {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.video-card__footer-actions-stat > p {
+  margin-left: 3px;
 }

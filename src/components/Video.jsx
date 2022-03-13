@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-import "../css/video.css";
-
 function Video({ url }) {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 

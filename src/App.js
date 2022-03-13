@@ -1,6 +1,5 @@
 import React from "react";
 import VideoCard from "./components/VideoCard";
-
 import "./css/app.css";
 
 function App() {
@@ -13,6 +12,12 @@ function App() {
           alt="IG Logo"
         />
         <h1>Reels</h1>
+        <h2 className="app__rights">
+          Made With ❤️ By{" "}
+          <a href="https://twitter.com/ssadawi__" target="__blank">
+            Samer A.
+          </a>
+        </h2>
       </div>
 
       <div className="app__videos">
