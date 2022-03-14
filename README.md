@@ -1,6 +1,6 @@
 # Instagram Reels Clone 🚀
 
-## 🔴 Live Demo:
+## 🔴 Live Demo
 
 [Click here...](https://samer-ig-reels.firebaseapp.com/)
 
