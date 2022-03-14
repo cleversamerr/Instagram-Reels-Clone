@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { onSnapshot } from "firebase/firestore";
+import { reelsRef } from "./firebase";
 import VideoCard from "./components/VideoCard";
 import "./css/app.css";
 
 function App() {
+  const [reels, setReels] = useState([]);
+
+  useEffect(() => {
+    onSnapshot(reelsRef, ({ docs }) =>
+      setReels(docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+    );
+  }, []);
+
   return (
     <div className="app">
       <div className="app__top">
@@ -21,30 +31,17 @@ function App() {
       </div>
 
       <div className="app__videos">
-        <VideoCard
-          channel="Samer A."
-          avatarSrc="https://avatars.githubusercontent.com/u/73291969?s=400&u=395eac23ec5c84e1cba65cdff29f3b5adb17d483&v=4"
-          song="Industry Baby"
-          url="https://vod-progressive.akamaized.net/exp=1647192129~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1419%2F20%2F507097464%2F2328131478.mp4~hmac=f5012a847f2af817af1db133e7e0e1126263419a1c05c7efa7e5d26d072d8405/vimeo-prod-skyfire-std-us/01/1419/20/507097464/2328131478.mp4?filename=pexels-cottonbro-6673886.mp4&download=1"
-          likes={960}
-          shares={30}
-        />
-        <VideoCard
-          channel="Samer A."
-          avatarSrc="https://avatars.githubusercontent.com/u/73291969?s=400&u=395eac23ec5c84e1cba65cdff29f3b5adb17d483&v=4"
-          song="Industry Baby"
-          url="https://vod-progressive.akamaized.net/exp=1647192129~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1419%2F20%2F507097464%2F2328131478.mp4~hmac=f5012a847f2af817af1db133e7e0e1126263419a1c05c7efa7e5d26d072d8405/vimeo-prod-skyfire-std-us/01/1419/20/507097464/2328131478.mp4?filename=pexels-cottonbro-6673886.mp4&download=1"
-          likes={960}
-          shares={30}
-        />
-        <VideoCard
-          channel="Samer A."
-          avatarSrc="https://avatars.githubusercontent.com/u/73291969?s=400&u=395eac23ec5c84e1cba65cdff29f3b5adb17d483&v=4"
-          song="Industry Baby"
-          url="https://vod-progressive.akamaized.net/exp=1647192129~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1419%2F20%2F507097464%2F2328131478.mp4~hmac=f5012a847f2af817af1db133e7e0e1126263419a1c05c7efa7e5d26d072d8405/vimeo-prod-skyfire-std-us/01/1419/20/507097464/2328131478.mp4?filename=pexels-cottonbro-6673886.mp4&download=1"
-          likes={960}
-          shares={30}
-        />
+        {reels.map((reel) => (
+          <VideoCard
+            key={reel.id}
+            channel={reel.channel}
+            avatarSrc={reel.avatarSrc}
+            song={reel.song}
+            url={reel.url}
+            likes={reel.likes}
+            shares={reel.shares}
+          />
+        ))}
       </div>
     </div>
   );
