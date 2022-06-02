@@ -1,4 +1,3 @@
-import React from "react";
 import VideoHeader from "./VideoHeader";
 import Video from "./Video";
 import VideoFooter from "./VideoFooter";

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function Video({ url }) {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);

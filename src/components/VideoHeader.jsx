@@ -1,4 +1,3 @@
-import React from "react";
 import { ArrowBackIos, CameraAltOutlined } from "@mui/icons-material";
 
 function VideoHeader() {

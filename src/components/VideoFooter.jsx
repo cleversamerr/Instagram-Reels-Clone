@@ -1,4 +1,3 @@
-import React from "react";
 import Ticker from "react-ticker";
 import { Button, Avatar } from "@mui/material";
 import {

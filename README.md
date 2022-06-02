@@ -6,14 +6,17 @@
 
 ## Description
 
-A realtime Instagram Reels clone with React and Firebase.
+Instagram Reels clone with React and Firebase.
 
 ## Getting Started
 
 ### Dependencies
 
 - React
+- React DOM
 - Firebase
+- MaterialUI
+- React Ticker
 
 ### Installing
 
@@ -29,9 +32,16 @@ A realtime Instagram Reels clone with React and Firebase.
 
 ## Authors
 
-- Built by [Samer A.](https://twitter.com/ssadawi__)
+- [Samer A.](https://twitter.com/cleversamerr)
 
 ## Version History
 
 - 1.0
+
   - Initial Release
+
+- 1.1
+  - Code enhancements
+  - Libs update
+  - Static data
+  - Firebase production enhancements
