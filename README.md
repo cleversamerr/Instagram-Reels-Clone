@@ -32,7 +32,7 @@ Instagram Reels clone with React and Firebase.
 
 ## Authors
 
-- [Samer A.](https://twitter.com/cleversamerr)
+Authored by [Samer A.](https://cleversamer.web.app/)
 
 ## Version History
 
